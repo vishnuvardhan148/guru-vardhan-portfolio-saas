@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 import { 
-  Cloud, Database, Server, Code, 
-  Network, Bot, 
+  Cloud, Database, 
+  Network, Code, 
   FileCode, Laptop, Terminal, 
   Workflow, PenTool
 } from "lucide-react";
@@ -15,8 +15,7 @@ const Skills = () => {
       skills: [
         { name: "AWS", icon: <Cloud className="h-8 w-8 text-primary" /> },
         { name: "Azure", icon: <Cloud className="h-8 w-8 text-blue-500" /> },
-        { name: "GCP", icon: <Cloud className="h-8 w-8 text-yellow-500" /> },
-        { name: "Serverless", icon: <Server className="h-8 w-8 text-violet-500" /> }
+        { name: "GCP", icon: <Cloud className="h-8 w-8 text-yellow-500" /> }
       ]
     },
     {
@@ -32,9 +31,8 @@ const Skills = () => {
       title: "Programming",
       skills: [
         { name: "Python", icon: <Code className="h-8 w-8 text-yellow-600" /> },
-        { name: "JavaScript", icon: <FileCode className="h-8 w-8 text-yellow-400" /> },
-        { name: "Node.js", icon: <Terminal className="h-8 w-8 text-green-600" /> },
-        { name: "React", icon: <Laptop className="h-8 w-8 text-blue-500" /> }
+        { name: "C++", icon: <FileCode className="h-8 w-8 text-blue-600" /> },
+        { name: "JavaScript", icon: <FileCode className="h-8 w-8 text-yellow-400" /> }
       ]
     }
   ];
