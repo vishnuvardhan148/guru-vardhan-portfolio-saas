@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileDown } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -65,13 +65,13 @@ const Navbar = () => {
           ))}
           <motion.a
             href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            download
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
-            className="btn-primary"
+            className="btn-primary inline-flex items-center gap-2"
           >
+            <FileDown size={18} />
             Download CV
           </motion.a>
         </nav>
@@ -106,11 +106,11 @@ const Navbar = () => {
             ))}
             <a
               href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-block text-center"
+              download
+              className="btn-primary inline-flex items-center justify-center gap-2"
               onClick={() => setMobileMenuOpen(false)}
             >
+              <FileDown size={18} />
               Download CV
             </a>
           </div>

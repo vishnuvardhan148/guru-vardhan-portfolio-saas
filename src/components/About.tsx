@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 import { Avatar, AvatarImage } from "./ui/avatar";
+import { Button } from "./ui/button";
+import { FileDown } from "lucide-react";
 
 const About = () => {
   return (
@@ -16,7 +18,7 @@ const About = () => {
             <div className="rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-primary/80 to-violet-600 p-1">
               <div className="bg-white rounded-xl p-4 h-full">
                 <img 
-                  src="/lovable-uploads/6f715955-1e48-4185-8f52-8596d5dc5584.png" 
+                  src="/lovable-uploads/2b816c02-adc4-4a9d-a5d4-b9a19d660867.png" 
                   alt="Vishnu Vardhan Gurram" 
                   className="w-full h-auto rounded-lg object-cover"
                 />
@@ -37,6 +39,17 @@ const About = () => {
                 Currently pursuing B.Tech at Lovely Professional University, I'm focused on building 
                 innovative solutions that leverage cloud technologies and automation.
               </p>
+
+              <div className="mt-8">
+                <a 
+                  href="/resume.pdf" 
+                  download
+                  className="btn-primary inline-flex items-center gap-2"
+                >
+                  <FileDown size={18} />
+                  Download CV
+                </a>
+              </div>
             </div>
           </MotionWrapper>
         </div>
