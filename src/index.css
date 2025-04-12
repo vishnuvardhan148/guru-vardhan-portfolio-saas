@@ -84,12 +84,12 @@
   .card {
     @apply bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300;
   }
-}
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-violet-500 animate-gradientBg;
+  }
 
-.gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-violet-500 animate-gradientBg;
-}
-
-.gradient-bg {
-  @apply bg-gradient-to-br from-primary via-violet-500 to-purple-700 bg-size-200 animate-gradientBg;
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary via-violet-500 to-purple-700 bg-[size:200%] animate-gradientBg;
+  }
 }
