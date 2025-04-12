@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,6 +18,9 @@ export default {
 			}
 		},
 		extend: {
+			backgroundSize: {
+				'200': '200%',
+			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				heading: ['Space Grotesk', 'sans-serif'],
