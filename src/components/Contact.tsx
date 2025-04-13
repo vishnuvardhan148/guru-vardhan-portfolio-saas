@@ -1,9 +1,14 @@
+
 import { useState, FormEvent, useRef } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, Linkedin, Github, ArrowRight } from "lucide-react";
+import { Mail, Github, Linkedin, ArrowRight } from "lucide-react";
 import { toast } from "sonner";
 import MotionWrapper from "./MotionWrapper";
 import emailjs from "@emailjs/browser";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -17,11 +22,20 @@ const Contact = () => {
     setLoading(true);
 
     try {
+      // Log the form data to help with debugging
+      console.log("Sending email with:", {
+        name,
+        email,
+        message,
+        serviceId: "service_6n9xbjh",
+        templateId: "template_1wyg1xr"
+      });
+      
       await emailjs.sendForm(
-        "service_6n9xbjh", // Your EmailJS service ID
-        "template_1wyg1xr", // Your EmailJS template ID
+        "service_6n9xbjh",
+        "template_1wyg1xr",
         formRef.current as HTMLFormElement,
-        "31C5xIlGBVHUcSvJo" // Your EmailJS public key
+        "31C5xIlGBVHUcSvJo"
       );
       
       toast.success("Message sent successfully!");
@@ -99,57 +113,58 @@ const Contact = () => {
           <MotionWrapper delay={0.3} direction="left">
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="from_name" className="block text-sm font-medium mb-1">
+                <Label htmlFor="from_name" className="block text-sm font-medium mb-1">
                   Name
-                </label>
-                <input
+                </Label>
+                <Input
                   id="from_name"
                   name="from_name"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-4 py-2 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-white"
+                  className="w-full"
                   required
                 />
               </div>
               
               <div>
-                <label htmlFor="reply_to" className="block text-sm font-medium mb-1">
+                <Label htmlFor="reply_to" className="block text-sm font-medium mb-1">
                   Email
-                </label>
-                <input
+                </Label>
+                <Input
                   id="reply_to"
                   name="reply_to"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-2 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-white"
+                  className="w-full"
                   required
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">
+                <Label htmlFor="message" className="block text-sm font-medium mb-1">
                   Message
-                </label>
-                <textarea
+                </Label>
+                <Textarea
                   id="message"
                   name="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={5}
-                  className="w-full px-4 py-2 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 bg-white"
+                  className="w-full"
                   required
-                ></textarea>
+                />
               </div>
               
-              <button
+              <Button
                 type="submit"
-                className={`btn-primary w-full ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
+                className="w-full"
                 disabled={loading}
+                variant="default"
               >
                 {loading ? "Sending..." : "Send Message"}
-              </button>
+              </Button>
             </form>
           </MotionWrapper>
         </div>
