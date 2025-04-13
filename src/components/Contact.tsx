@@ -1,4 +1,3 @@
-
 import { useState, FormEvent, useRef } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, Linkedin, Github, ArrowRight } from "lucide-react";
@@ -19,10 +18,10 @@ const Contact = () => {
 
     try {
       await emailjs.sendForm(
-        "service_e72z1hj", // Your EmailJS service ID
-        "template_63bpjbk", // Your EmailJS template ID
+        "service_6n9xbjh", // Your EmailJS service ID
+        "template_1wyg1xr", // Your EmailJS template ID
         formRef.current as HTMLFormElement,
-        "Uwj-NBrMgJEPdCh94" // Your EmailJS public key
+        "31C5xIlGBVHUcSvJo" // Your EmailJS public key
       );
       
       toast.success("Message sent successfully!");
