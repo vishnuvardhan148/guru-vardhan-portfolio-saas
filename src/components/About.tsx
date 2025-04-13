@@ -2,8 +2,6 @@
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 import { Avatar, AvatarImage } from "./ui/avatar";
-import { Button } from "./ui/button";
-import { FileDown } from "lucide-react";
 
 const About = () => {
   return (
@@ -39,17 +37,6 @@ const About = () => {
                 Currently pursuing B.Tech at Lovely Professional University, I'm focused on building 
                 innovative solutions that leverage cloud technologies and automation.
               </p>
-
-              <div className="mt-8">
-                <a 
-                  href="/resume.pdf" 
-                  download
-                  className="btn-primary inline-flex items-center gap-2"
-                >
-                  <FileDown size={18} />
-                  Download CV
-                </a>
-              </div>
             </div>
           </MotionWrapper>
         </div>
