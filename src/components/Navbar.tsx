@@ -64,8 +64,9 @@ const Navbar = () => {
             </motion.a>
           ))}
           <motion.a
-            href="/resume.pdf"
-            download
+            href="https://drive.google.com/file/d/1IRqC8ocjNBTOtFq4uLyAjnxama3GVGLT/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
@@ -105,8 +106,9 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="/resume.pdf"
-              download
+              href="https://drive.google.com/file/d/1IRqC8ocjNBTOtFq4uLyAjnxama3GVGLT/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-flex items-center justify-center gap-2"
               onClick={() => setMobileMenuOpen(false)}
             >

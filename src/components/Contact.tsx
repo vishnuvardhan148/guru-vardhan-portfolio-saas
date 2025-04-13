@@ -1,5 +1,5 @@
 
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useRef } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, Linkedin, Github, ArrowRight } from "lucide-react";
 import { toast } from "sonner";
@@ -11,22 +11,18 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      // Replace these with your actual EmailJS service, template, and user IDs
-      await emailjs.send(
-        "service_id", // Service ID
-        "template_id", // Template ID
-        {
-          from_name: name,
-          reply_to: email,
-          message,
-        },
-        "user_id" // User ID (public key)
+      await emailjs.sendForm(
+        "service_e72z1hj", // Your EmailJS service ID
+        "template_63bpjbk", // Your EmailJS template ID
+        formRef.current as HTMLFormElement,
+        "Uwj-NBrMgJEPdCh94" // Your EmailJS public key
       );
       
       toast.success("Message sent successfully!");
@@ -90,7 +86,7 @@ const Contact = () => {
               
               <div className="mt-8">
                 <a 
-                  href="/resume.pdf" 
+                  href="https://drive.google.com/file/d/1IRqC8ocjNBTOtFq4uLyAjnxama3GVGLT/view?usp=sharing" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center btn-primary"
@@ -102,13 +98,14 @@ const Contact = () => {
           </MotionWrapper>
           
           <MotionWrapper delay={0.3} direction="left">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-1">
+                <label htmlFor="from_name" className="block text-sm font-medium mb-1">
                   Name
                 </label>
                 <input
-                  id="name"
+                  id="from_name"
+                  name="from_name"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -118,11 +115,12 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-1">
+                <label htmlFor="reply_to" className="block text-sm font-medium mb-1">
                   Email
                 </label>
                 <input
-                  id="email"
+                  id="reply_to"
+                  name="reply_to"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -137,6 +135,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   rows={5}
