@@ -85,22 +85,22 @@ const Hero = () => {
             AI solutions, and exploring DevOps technologies.
           </motion.p>
 
-          {/* Social links */}
+          {/* Social links - updated with correct profile links */}
           <motion.div
             className="flex justify-center gap-4 mb-10"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.35 }}
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+            <a href="https://github.com/vishnuvardhan148" target="_blank" rel="noopener noreferrer" 
               className="p-3 bg-white/80 rounded-full shadow-lg hover:bg-primary hover:text-white transition-all duration-300">
               <Github size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/vishnu-vardhan-gurram" target="_blank" rel="noopener noreferrer"
               className="p-3 bg-white/80 rounded-full shadow-lg hover:bg-primary hover:text-white transition-all duration-300">
               <Linkedin size={20} />
             </a>
-            <a href="mailto:contact@example.com"
+            <a href="mailto:vishnuvardhangurram4@gmail.com"
               className="p-3 bg-white/80 rounded-full shadow-lg hover:bg-primary hover:text-white transition-all duration-300">
               <Mail size={20} />
             </a>
