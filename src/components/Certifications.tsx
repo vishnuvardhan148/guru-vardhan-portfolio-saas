@@ -21,7 +21,7 @@ const certifications: CertificationProps[] = [
   {
     name: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services (AWS)",
-    credentialLink: "https://www.credly.com/badges/0ee68356-8fe0-47ea-90e4-7a337f3e84f7/public_url",
+    credentialLink: "https://www.credly.com/badges/0ee68356-8fe0-47ea-9ccf-8797d7c675a9/linked_in_profile",
     logo: "aws",
     bgColor: "bg-gradient-to-br from-orange-100 to-orange-50",
     iconColor: "text-orange-500",
@@ -35,7 +35,7 @@ const certifications: CertificationProps[] = [
   {
     name: "Microsoft Certified: Azure Administrator Associate (AZ-104)",
     issuer: "Microsoft",
-    credentialLink: "https://www.credly.com/badges/9ba6b9f7-1704-4d11-95c7-f7ed5c5706f6/public_url",
+    credentialLink: "https://learn.microsoft.com/en-us/users/vishnuvardhangurram-8824/credentials/9e7fe2d40c03d76d?ref=https%3A%2F%2Fwww.linkedin.com%2F",
     logo: "azure",
     bgColor: "bg-gradient-to-br from-blue-100 to-blue-50",
     iconColor: "text-blue-500",
