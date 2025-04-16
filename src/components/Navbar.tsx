@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X, FileDown } from "lucide-react";
@@ -49,7 +48,6 @@ const Navbar = () => {
           Vishnu Vardhan
         </motion.a>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link, index) => (
             <motion.a
@@ -64,7 +62,7 @@ const Navbar = () => {
             </motion.a>
           ))}
           <motion.a
-            href="https://drive.google.com/file/d/1IRqC8ocjNBTOtFq4uLyAjnxama3GVGLT/view?usp=sharing"
+            href="https://drive.google.com/file/d/1zn3uFoB_U8tefyBK3p11xTU0RNRqc9qw/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -77,7 +75,6 @@ const Navbar = () => {
           </motion.a>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden text-foreground focus:outline-none"
@@ -86,7 +83,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
@@ -106,7 +102,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://drive.google.com/file/d/1IRqC8ocjNBTOtFq4uLyAjnxama3GVGLT/view?usp=sharing"
+              href="https://drive.google.com/file/d/1zn3uFoB_U8tefyBK3p11xTU0RNRqc9qw/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center justify-center gap-2"
