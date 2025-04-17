@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
@@ -23,7 +22,7 @@ const Projects = () => {
       title: "AI-Powered Mental Health Chatbot",
       description: "Developed a mental health support chatbot using custom LLM & RAG technologies. The system was deployed on AWS with serverless architecture.",
       tags: ["Python", "AWS", "LLM", "RAG"],
-      image: "mental-health-chatbot.jpg",
+      image: "/lovable-uploads/ental-health-chatbot.jpg",
       link: "#",
       github: "#",
       fullDescription: "A comprehensive mental health support system utilizing advanced language models to provide empathetic responses and guidance to users in need. The system leverages RAG (Retrieval Augmented Generation) to provide accurate, contextual information.",
@@ -44,7 +43,7 @@ const Projects = () => {
       title: "Real-Time Voice Translator",
       description: "Built a real-time voice translation system leveraging AWS services including Transcribe for speech-to-text, Translate for language translation, and Polly for text-to-speech.",
       tags: ["AWS Transcribe", "AWS Translate", "AWS Polly", "Python"],
-      image: "voice-translator.jpg",
+      image: "/lovable-uploads/voice-translator.jpg",
       link: "#",
       github: "https://github.com/vishnuvardhan148/nephele",
       fullDescription: "A real-time voice translation solution that enables seamless communication across language barriers. The system captures speech, performs real-time translation, and delivers natural-sounding output in the target language.",
@@ -65,7 +64,7 @@ const Projects = () => {
       title: "Image Classification System",
       description: "Implemented an image classification system using Amazon Rekognition, S3 for storage, and Lambda functions for serverless processing.",
       tags: ["AWS Rekognition", "S3", "Lambda", "Serverless"],
-      image: "image-classification.jpg",
+      image: "/lovable-uploads/image-classification.jpg",
       link: "#",
       github: "https://github.com/vishnuvardhan148/image-labels-generator",
       fullDescription: "A scalable image classification platform that can identify objects, scenes, and activities in images with high accuracy. The system is built on serverless architecture for cost-efficiency and automatic scaling.",
@@ -86,7 +85,7 @@ const Projects = () => {
       title: "Cloud Hosted Cafe Website",
       description: "Designed and developed a responsive website for a cafe with HTML/CSS, hosted on Amazon S3 with CloudFront distribution.",
       tags: ["HTML/CSS", "AWS S3", "CloudFront"],
-      image: "cafe-website.jpg", // Update this to match the new image
+      image: "/lovable-uploads/cafe-website.jpg",
       link: "#",
       github: "https://github.com/vishnuvardhan148/my-static-website",
       fullDescription: "A modern, responsive website for a local cafe that showcases their menu, location, and online ordering capabilities. The site is optimized for performance and hosted entirely on AWS infrastructure.",
