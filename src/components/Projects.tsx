@@ -1,5 +1,6 @@
+
 import { motion } from "framer-motion";
-import { ExternalLink, Github, ArrowRight, X } from "lucide-react";
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -85,7 +86,7 @@ const Projects = () => {
       title: "Cloud Hosted Cafe Website",
       description: "Designed and developed a responsive website for a cafe with HTML/CSS, hosted on Amazon S3 with CloudFront distribution.",
       tags: ["HTML/CSS", "AWS S3", "CloudFront"],
-      image: "cafe-website.jpg",
+      image: "cafe-website.jpg", // Update this to match the new image
       link: "#",
       github: "https://github.com/vishnuvardhan148/my-static-website",
       fullDescription: "A modern, responsive website for a local cafe that showcases their menu, location, and online ordering capabilities. The site is optimized for performance and hosted entirely on AWS infrastructure.",
