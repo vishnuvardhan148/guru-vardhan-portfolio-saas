@@ -15,6 +15,7 @@ interface CertificationProps {
   bgColor: string;
   iconColor: string;
   learnings: string[];
+  issuedDate: string;
 }
 
 const certifications: CertificationProps[] = [
@@ -25,6 +26,7 @@ const certifications: CertificationProps[] = [
     logo: "aws",
     bgColor: "bg-gradient-to-br from-orange-100 to-orange-50",
     iconColor: "text-orange-500",
+    issuedDate: "April 2024",
     learnings: [
       "Cloud concepts and AWS global infrastructure",
       "AWS core services including compute, storage, networking, and databases",
@@ -39,6 +41,7 @@ const certifications: CertificationProps[] = [
     logo: "azure",
     bgColor: "bg-gradient-to-br from-blue-100 to-blue-50",
     iconColor: "text-blue-500",
+    issuedDate: "March 2024",
     learnings: [
       "Managing Azure identities and governance",
       "Implementing and managing Azure storage solutions",
@@ -53,6 +56,7 @@ const certifications: CertificationProps[] = [
     logo: "nptel",
     bgColor: "bg-gradient-to-br from-green-100 to-green-50",
     iconColor: "text-green-600",
+    issuedDate: "December 2023",
     learnings: [
       "Fundamentals of IoT architecture and protocols",
       "Sensor technologies and data collection methods",
@@ -62,7 +66,7 @@ const certifications: CertificationProps[] = [
   }
 ];
 
-const CertificationCard = ({ name, issuer, credentialLink, logo, bgColor, iconColor, learnings }: CertificationProps) => {
+const CertificationCard = ({ name, issuer, credentialLink, logo, bgColor, iconColor, learnings, issuedDate }: CertificationProps) => {
   const getLogoImage = () => {
     switch(logo) {
       case "aws":
@@ -110,7 +114,10 @@ const CertificationCard = ({ name, issuer, credentialLink, logo, bgColor, iconCo
           <div className="absolute top-0 right-0 h-24 w-24 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-xl"></div>
           {getLogoImage()}
           <CardTitle className="text-xl mt-2 font-bold">{name}</CardTitle>
-          <Badge variant="secondary" className="text-xs font-medium px-3 py-1 bg-white/50 backdrop-blur-sm mx-auto mt-2">{issuer}</Badge>
+          <Badge variant="secondary" className="text-xs font-medium px-3 py-1 bg-white/50 backdrop-blur-sm mx-auto mt-2">
+            {issuer}
+          </Badge>
+          <p className="text-sm text-muted-foreground mt-2">Issued: {issuedDate}</p>
         </CardHeader>
         <CardContent className="pt-0 flex-grow space-y-4">
           <Separator className="mb-4 opacity-30" />
