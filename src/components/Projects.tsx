@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight, X } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
@@ -46,7 +45,7 @@ const Projects = () => {
       tags: ["AWS Transcribe", "AWS Translate", "AWS Polly", "Python"],
       image: "voice-translator.jpg", 
       link: "#",
-      github: "#",
+      github: "https://github.com/vishnuvardhan148/nephele",
       fullDescription: "A real-time voice translation solution that enables seamless communication across language barriers. The system captures speech, performs real-time translation, and delivers natural-sounding output in the target language.",
       features: [
         "Support for 30+ languages",
@@ -67,7 +66,7 @@ const Projects = () => {
       tags: ["AWS Rekognition", "S3", "Lambda", "Serverless"],
       image: "image-classification.jpg",
       link: "#",
-      github: "#",
+      github: "https://github.com/vishnuvardhan148/image-labels-generator",
       fullDescription: "A scalable image classification platform that can identify objects, scenes, and activities in images with high accuracy. The system is built on serverless architecture for cost-efficiency and automatic scaling.",
       features: [
         "Object and scene detection",
@@ -88,7 +87,7 @@ const Projects = () => {
       tags: ["HTML/CSS", "AWS S3", "CloudFront"],
       image: "cafe-website.jpg",
       link: "#",
-      github: "#",
+      github: "https://github.com/vishnuvardhan148/my-static-website",
       fullDescription: "A modern, responsive website for a local cafe that showcases their menu, location, and online ordering capabilities. The site is optimized for performance and hosted entirely on AWS infrastructure.",
       features: [
         "Online menu with filtering options",
