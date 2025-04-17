@@ -43,7 +43,7 @@ const Projects = () => {
       title: "Real-Time Voice Translator",
       description: "Built a real-time voice translation system leveraging AWS services including Transcribe for speech-to-text, Translate for language translation, and Polly for text-to-speech.",
       tags: ["AWS Transcribe", "AWS Translate", "AWS Polly", "Python"],
-      image: "voice-translator.jpg", 
+      image: "voice-translator.jpg",
       link: "#",
       github: "https://github.com/vishnuvardhan148/nephele",
       fullDescription: "A real-time voice translation solution that enables seamless communication across language barriers. The system captures speech, performs real-time translation, and delivers natural-sounding output in the target language.",
