@@ -26,7 +26,7 @@ const certifications: CertificationProps[] = [
     logo: "aws",
     bgColor: "bg-gradient-to-br from-orange-100 to-orange-50",
     iconColor: "text-orange-500",
-    issuedDate: "April 2024",
+    issuedDate: "January 2025",
     learnings: [
       "Cloud concepts and AWS global infrastructure",
       "AWS core services including compute, storage, networking, and databases",
@@ -41,7 +41,7 @@ const certifications: CertificationProps[] = [
     logo: "azure",
     bgColor: "bg-gradient-to-br from-blue-100 to-blue-50",
     iconColor: "text-blue-500",
-    issuedDate: "March 2024",
+    issuedDate: "April 2025",
     learnings: [
       "Managing Azure identities and governance",
       "Implementing and managing Azure storage solutions",
@@ -56,7 +56,7 @@ const certifications: CertificationProps[] = [
     logo: "nptel",
     bgColor: "bg-gradient-to-br from-green-100 to-green-50",
     iconColor: "text-green-600",
-    issuedDate: "December 2023",
+    issuedDate: "October 2024",
     learnings: [
       "Fundamentals of IoT architecture and protocols",
       "Sensor technologies and data collection methods",
