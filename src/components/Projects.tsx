@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
@@ -121,8 +122,18 @@ const Projects = () => {
                 className="card group hover:-translate-y-2 transition-transform cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
-                <div className="h-48 bg-gradient-to-br from-primary/80 to-violet-600 rounded-lg mb-4 overflow-hidden flex items-center justify-center">
-                  <h3 className="text-white font-bold text-xl px-4 text-center">{project.title}</h3>
+                <div className="h-48 bg-gradient-to-br from-primary/80 to-violet-600 rounded-lg mb-4 overflow-hidden flex items-center justify-center relative">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${project.image}`);
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/40"></div>
+                  <h3 className="text-white font-bold text-xl px-4 text-center relative z-10">{project.title}</h3>
                 </div>
                 
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
@@ -159,8 +170,18 @@ const Projects = () => {
           </DialogHeader>
           
           <div className="py-4 space-y-4">
-            <div className="bg-gradient-to-br from-primary/80 to-violet-600 h-40 rounded-lg flex items-center justify-center">
-              <h3 className="text-white font-bold text-xl px-4 text-center">{selectedProject?.title}</h3>
+            <div className="bg-gradient-to-br from-primary/80 to-violet-600 h-40 rounded-lg flex items-center justify-center relative">
+              <img 
+                src={selectedProject?.image} 
+                alt={selectedProject?.title}
+                className="absolute inset-0 w-full h-full object-cover"
+                onError={(e) => {
+                  console.error(`Failed to load image: ${selectedProject?.image}`);
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+              <div className="absolute inset-0 bg-black/40"></div>
+              <h3 className="text-white font-bold text-xl px-4 text-center relative z-10">{selectedProject?.title}</h3>
             </div>
             
             <div>

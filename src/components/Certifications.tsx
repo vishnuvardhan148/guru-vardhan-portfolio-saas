@@ -76,6 +76,10 @@ const CertificationCard = ({ name, issuer, credentialLink, logo, bgColor, iconCo
               src="/lovable-uploads/8e68447e-dc56-4e3e-a33f-0f1830902eac.png" 
               alt="AWS Certified Cloud Practitioner" 
               className="w-full h-full object-contain"
+              onError={(e) => {
+                console.error(`Failed to load AWS logo image`);
+                e.currentTarget.style.display = 'none';
+              }}
             />
           </div>
         );
@@ -86,13 +90,29 @@ const CertificationCard = ({ name, issuer, credentialLink, logo, bgColor, iconCo
               src="/lovable-uploads/c67a6ad7-0cdb-4ff0-b82a-3f07e63e28b2.png" 
               alt="Microsoft Azure Administrator" 
               className="w-full h-full object-contain"
+              onError={(e) => {
+                console.error(`Failed to load Azure logo image`);
+                e.currentTarget.style.display = 'none';
+              }}
             />
           </div>
         );
       case "nptel":
         return (
-          <div className="w-24 h-24 flex items-center justify-center mx-auto mb-4 rounded-full bg-green-100">
-            <Award className={`${iconColor} w-12 h-12`} />
+          <div className="w-24 h-24 flex items-center justify-center mx-auto mb-4">
+            <img 
+              src="/lovable-uploads/iot.jpg" 
+              alt="NPTEL IoT Certification" 
+              className="w-full h-full object-cover rounded-full"
+              onError={(e) => {
+                console.error(`Failed to load IoT image`);
+                const fallback = document.createElement('div');
+                fallback.className = 'w-24 h-24 flex items-center justify-center rounded-full bg-green-100';
+                fallback.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="${iconColor} w-12 h-12"><path d="M13.73 4a2 2 0 0 0-3.46 0"/><path d="M18.53 5a2 2 0 0 0-3.46 0"/><path d="M8.93 5a2 2 0 0 0-3.46 0"/><path d="M20 12.5v.5"/><path d="M20 16.5v.5"/><path d="M4 12.5v.5"/><path d="M4 16.5v.5"/><path d="M12 4v16"/><path d="M6 8h12"/><path d="M6 16h12"/></svg>`;
+                e.currentTarget.parentNode?.appendChild(fallback);
+                e.currentTarget.style.display = 'none';
+              }}
+            />
           </div>
         );
       default:
