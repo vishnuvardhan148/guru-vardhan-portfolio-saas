@@ -22,7 +22,7 @@ const Projects = () => {
       title: "AI-Powered Mental Health Chatbot",
       description: "Developed a mental health support chatbot using custom LLM & RAG technologies. The system was deployed on AWS with serverless architecture.",
       tags: ["Python", "AWS", "LLM", "RAG"],
-      image: "/lovable-uploads/ental-health-chatbot.jpg",
+      image: "/lovable-uploads/Mental-health-chatbot.jpg",
       link: "#",
       github: "#",
       fullDescription: "A comprehensive mental health support system utilizing advanced language models to provide empathetic responses and guidance to users in need. The system leverages RAG (Retrieval Augmented Generation) to provide accurate, contextual information.",
