@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
@@ -133,7 +132,6 @@ const Projects = () => {
                     }}
                   />
                   <div className="absolute inset-0 bg-black/40"></div>
-                  <h3 className="text-white font-bold text-xl px-4 text-center relative z-10">{project.title}</h3>
                 </div>
                 
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
@@ -181,7 +179,6 @@ const Projects = () => {
                 }}
               />
               <div className="absolute inset-0 bg-black/40"></div>
-              <h3 className="text-white font-bold text-xl px-4 text-center relative z-10">{selectedProject?.title}</h3>
             </div>
             
             <div>
