@@ -100,7 +100,7 @@ const CertificationCard = ({ name, issuer, credentialLink, logo, bgColor, iconCo
         return (
           <div className="w-28 h-28 flex items-center justify-center mx-auto mb-4">
             <img 
-              src="/lovable-uploads/nptel%20logo.jpg" 
+              src="/lovable-uploads/nptel_logo.jpg" 
               alt="NPTEL IoT Certification" 
               className="w-full h-full object-contain"
               onError={(e) => {
