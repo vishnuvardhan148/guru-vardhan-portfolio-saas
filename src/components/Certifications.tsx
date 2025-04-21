@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Award, ExternalLink, Check } from "lucide-react";
 import MotionWrapper from "./MotionWrapper";
@@ -98,11 +99,11 @@ const CertificationCard = ({ name, issuer, credentialLink, logo, bgColor, iconCo
         );
       case "nptel":
         return (
-          <div className="w-24 h-24 flex items-center justify-center mx-auto mb-4">
+          <div className="w-28 h-28 flex items-center justify-center mx-auto mb-4">
             <img 
               src="/lovable-uploads/nptel logo.jpg" 
               alt="NPTEL IoT Certification" 
-              className="w-full h-full object-contain rounded-full"
+              className="w-full h-full object-contain"
               onError={(e) => {
                 console.error(`Failed to load NPTEL logo image`);
                 e.currentTarget.style.display = 'none';
@@ -186,3 +187,4 @@ const Certifications = () => {
 };
 
 export default Certifications;
+
