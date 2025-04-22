@@ -17,7 +17,7 @@ const About = () => {
                 <img 
                   src="/lovable-uploads/2b816c02-adc4-4a9d-a5d4-b9a19d660867.png" 
                   alt="Vishnu Vardhan Gurram" 
-                  className="w-110 md:w-110 h-auto rounded-lg object-cover mx-auto"
+                  className="w-100 md:w-100 h-auto rounded-lg object-cover mx-auto"
                 />
               </div>
             </div>
