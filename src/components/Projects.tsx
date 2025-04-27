@@ -23,7 +23,7 @@ const Projects = () => {
       description: "Developed a mental health support chatbot using custom LLM & RAG technologies. The system was deployed on AWS with serverless architecture.",
       tags: ["Python", "AWS", "LLM", "RAG"],
       image: "/lovable-uploads/Mental-health-chatbot.jpg",
-      link: "#",
+      link: "https://astounding-bonbon-33cce3.netlify.app/",
       github: "#",
       fullDescription: "A comprehensive mental health support system utilizing advanced language models to provide empathetic responses and guidance to users in need. The system leverages RAG (Retrieval Augmented Generation) to provide accurate, contextual information.",
       features: [
@@ -44,7 +44,7 @@ const Projects = () => {
       description: "Built a real-time voice translation system leveraging AWS services including Transcribe for speech-to-text, Translate for language translation, and Polly for text-to-speech.",
       tags: ["AWS Transcribe", "AWS Translate", "AWS Polly", "Python"],
       image: "/lovable-uploads/voice-translator.jpg",
-      link: "#",
+      link: "https://gilded-puppy-edf8a8.netlify.app/",
       github: "https://github.com/vishnuvardhan148/nephele",
       fullDescription: "A real-time voice translation solution that enables seamless communication across language barriers. The system captures speech, performs real-time translation, and delivers natural-sounding output in the target language.",
       features: [
